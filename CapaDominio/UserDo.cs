@@ -85,6 +85,21 @@ namespace CapaDominio
             _usuario.Insertar();
         }
 
+        public void EditarUser(string pNombre, string pTipoIdent, string pNumIdent, string pTelefono, string pCorreo, string pNombreUser, string pPass, string pTipoUser,
+            string pID)
+        {
+            _usuario._Nombre = pNombre;
+            _usuario._TipoIdent = Convert.ToInt32(pTipoIdent);
+            _usuario._NumIdent = pNumIdent;
+            _usuario._Telefono = pTelefono;
+            _usuario._Correo = pCorreo;
+            _usuario._NombreUsuario = pNombreUser;
+            _usuario._Contrasena = pPass;
+            _usuario._TipoUsuario = Convert.ToInt32(pTipoUser);
+            _usuario._UsuarioID = Convert.ToInt32(pID);
+            _usuario.Modificar();
+        }
+
         #endregion
 
     }

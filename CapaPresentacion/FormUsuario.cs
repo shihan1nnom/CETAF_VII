@@ -43,6 +43,9 @@ namespace CapaPresentacion
         {
             AbrirFormulario<FormBusquedaUser>();
             //lbAvisos.Text = _UsuarioID;
+            btnActualizar.Enabled = true;
+            btnDesactivar.Enabled = true;
+            btnGuardar.Enabled = false;
         }
 
         // Metodo para abrir formularios
@@ -162,6 +165,39 @@ namespace CapaPresentacion
             }
             else
                 lbAvisos.Text = "La contraseña no coincide";
+        }
+
+        private void btnActualizar_Click(object sender, EventArgs e)
+        {
+            UserDo ModUser = new UserDo();
+            try
+            {
+                if (_UsuarioID != null)
+                {
+                    if (string.IsNullOrWhiteSpace(txtNombre.Text) || txtTipoIdent.SelectedIndex == 0 || string.IsNullOrWhiteSpace(txtNumIdent.Text) ||
+                        string.IsNullOrWhiteSpace(txtTelefono.Text) || string.IsNullOrWhiteSpace(txtCorreo.Text) || string.IsNullOrWhiteSpace(txtNombreUser.Text) ||
+                        string.IsNullOrWhiteSpace(txtPass.Text) || txtTipoUsuario.SelectedIndex == 0)
+                    {
+                        lbAvisos.Text = "Existe uno o mas campos vacios";
+                    }
+                    else
+                    {
+                        ModUser.EditarUser(txtNombre.Text, Convert.ToString(txtTipoIdent.SelectedValue), txtNumIdent.Text, txtTelefono.Text, txtCorreo.Text,
+                            txtNombreUser.Text, txtPass.Text, Convert.ToString(txtTipoUsuario.SelectedValue), _UsuarioID);
+                        lbAvisos.Text = "Datos actualizados con Exito!!!";
+                        Limpiar();
+                        Deshabilitar();
+                    }
+
+                }
+                else
+                    lbAvisos.Text = "Debe seleccionar un registro en el boton 'Buscar'";
+
+            }
+            catch (Exception ex)
+            {
+                lbAvisos.Text = "No se actualizaron los datos" + ex;
+            }
         }
     }
 }

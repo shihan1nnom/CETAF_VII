@@ -114,6 +114,7 @@
             this.btnActualizar.Text = "ACTUALIZAR";
             this.btnActualizar.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.btnActualizar.UseVisualStyleBackColor = false;
+            this.btnActualizar.Click += new System.EventHandler(this.btnActualizar_Click);
             // 
             // lbAvisos
             // 

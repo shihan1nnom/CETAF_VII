@@ -161,6 +161,30 @@ namespace CapaDatos
             }
         }
 
+        public void Modificar()
+        {
+            using (var conexion = ObtenerConexion())
+            {
+                conexion.Open();
+                using (var comando = new SqlCommand())
+                {
+                    comando.Connection = conexion;
+                    comando.CommandText = "ModificarUser";
+                    comando.CommandType = CommandType.StoredProcedure;
+                    comando.Parameters.AddWithValue("@nombre", Nombre);
+                    comando.Parameters.AddWithValue("@TipoIdent", TipoIdent);
+                    comando.Parameters.AddWithValue("@NumIdent", NumIdent);
+                    comando.Parameters.AddWithValue("@Telefono", Telefono);
+                    comando.Parameters.AddWithValue("@Correo", Correo);
+                    comando.Parameters.AddWithValue("@NombreUser", NombreUsuario);
+                    comando.Parameters.AddWithValue("@Password", Contrasena);
+                    comando.Parameters.AddWithValue("@TipoUserID", TipoUsuario);
+                    comando.Parameters.AddWithValue("@UsuarioID", UsuarioID);
+                    comando.ExecuteNonQuery();
+                }
+            }
+        }
+
         #endregion
     }
 }
