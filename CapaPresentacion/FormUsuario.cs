@@ -8,6 +8,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using CapaDominio;
+using Presentacion;
 
 namespace CapaPresentacion
 {
@@ -22,7 +23,14 @@ namespace CapaPresentacion
 
         private void btnCerrar_Click(object sender, EventArgs e)
         {
-            this.Close();
+            DialogResult resultado = new DialogResult();
+            Form mensaje = new FormMsgBox();
+            resultado = mensaje.ShowDialog();
+
+            if (resultado == DialogResult.OK)
+            {
+                this.Close();
+            }
         }
 
         private void FormUsuario_Load(object sender, EventArgs e)
@@ -198,6 +206,27 @@ namespace CapaPresentacion
             {
                 lbAvisos.Text = "No se actualizaron los datos" + ex;
             }
+        }
+
+        private void btnDesactivar_Click(object sender, EventArgs e)
+        {
+            UserDo ModUser = new UserDo();
+            if (_UsuarioID != null)
+            {
+                DialogResult resultado = new DialogResult();
+                Form mensaje = new FormMsgBoxQ();
+                resultado = mensaje.ShowDialog();
+                if (resultado == DialogResult.OK)
+                {
+                    ModUser.EliminarUser(_UsuarioID);
+                    lbAvisos.Text = "El registro se ha eliminado";
+                    Limpiar();
+                    Deshabilitar();
+                }
+
+            }
+            else
+                lbAvisos.Text = "Debe seleccionar un registro en el boton 'Buscar'";
         }
     }
 }

@@ -167,6 +167,7 @@
             this.btnDesactivar.Text = "DESACTIVAR";
             this.btnDesactivar.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.btnDesactivar.UseVisualStyleBackColor = false;
+            this.btnDesactivar.Click += new System.EventHandler(this.btnDesactivar_Click);
             // 
             // btnBuscar
             // 
@@ -215,8 +216,8 @@
             // txtTipoUsuario
             // 
             this.txtTipoUsuario.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.txtTipoUsuario.BackColor = System.Drawing.Color.White;
-            this.txtTipoUsuario.ForeColor = System.Drawing.Color.Black;
+            this.txtTipoUsuario.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(30)))), ((int)(((byte)(30)))), ((int)(((byte)(30)))));
+            this.txtTipoUsuario.ForeColor = System.Drawing.Color.White;
             this.txtTipoUsuario.FormattingEnabled = true;
             this.txtTipoUsuario.Location = new System.Drawing.Point(163, 464);
             this.txtTipoUsuario.Name = "txtTipoUsuario";
@@ -226,8 +227,8 @@
             // txtTipoIdent
             // 
             this.txtTipoIdent.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.txtTipoIdent.BackColor = System.Drawing.Color.White;
-            this.txtTipoIdent.ForeColor = System.Drawing.Color.Black;
+            this.txtTipoIdent.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(30)))), ((int)(((byte)(30)))), ((int)(((byte)(30)))));
+            this.txtTipoIdent.ForeColor = System.Drawing.Color.White;
             this.txtTipoIdent.FormattingEnabled = true;
             this.txtTipoIdent.Location = new System.Drawing.Point(181, 174);
             this.txtTipoIdent.Name = "txtTipoIdent";
@@ -237,8 +238,8 @@
             // txtReptirPass
             // 
             this.txtReptirPass.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.txtReptirPass.BackColor = System.Drawing.Color.White;
-            this.txtReptirPass.ForeColor = System.Drawing.Color.Black;
+            this.txtReptirPass.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(30)))), ((int)(((byte)(30)))), ((int)(((byte)(30)))));
+            this.txtReptirPass.ForeColor = System.Drawing.Color.White;
             this.txtReptirPass.Location = new System.Drawing.Point(191, 424);
             this.txtReptirPass.Name = "txtReptirPass";
             this.txtReptirPass.Size = new System.Drawing.Size(354, 23);
@@ -247,8 +248,8 @@
             // txtPass
             // 
             this.txtPass.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.txtPass.BackColor = System.Drawing.Color.White;
-            this.txtPass.ForeColor = System.Drawing.Color.Black;
+            this.txtPass.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(30)))), ((int)(((byte)(30)))), ((int)(((byte)(30)))));
+            this.txtPass.ForeColor = System.Drawing.Color.White;
             this.txtPass.Location = new System.Drawing.Point(133, 381);
             this.txtPass.Name = "txtPass";
             this.txtPass.Size = new System.Drawing.Size(412, 23);
@@ -257,8 +258,8 @@
             // txtNombreUser
             // 
             this.txtNombreUser.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.txtNombreUser.BackColor = System.Drawing.Color.White;
-            this.txtNombreUser.ForeColor = System.Drawing.Color.Black;
+            this.txtNombreUser.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(30)))), ((int)(((byte)(30)))), ((int)(((byte)(30)))));
+            this.txtNombreUser.ForeColor = System.Drawing.Color.White;
             this.txtNombreUser.Location = new System.Drawing.Point(193, 338);
             this.txtNombreUser.Name = "txtNombreUser";
             this.txtNombreUser.Size = new System.Drawing.Size(352, 23);
@@ -267,8 +268,8 @@
             // txtCorreo
             // 
             this.txtCorreo.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.txtCorreo.BackColor = System.Drawing.Color.White;
-            this.txtCorreo.ForeColor = System.Drawing.Color.Black;
+            this.txtCorreo.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(30)))), ((int)(((byte)(30)))), ((int)(((byte)(30)))));
+            this.txtCorreo.ForeColor = System.Drawing.Color.White;
             this.txtCorreo.Location = new System.Drawing.Point(104, 294);
             this.txtCorreo.Name = "txtCorreo";
             this.txtCorreo.Size = new System.Drawing.Size(441, 23);
@@ -277,8 +278,8 @@
             // txtTelefono
             // 
             this.txtTelefono.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.txtTelefono.BackColor = System.Drawing.Color.White;
-            this.txtTelefono.ForeColor = System.Drawing.Color.Black;
+            this.txtTelefono.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(30)))), ((int)(((byte)(30)))), ((int)(((byte)(30)))));
+            this.txtTelefono.ForeColor = System.Drawing.Color.White;
             this.txtTelefono.Location = new System.Drawing.Point(115, 252);
             this.txtTelefono.Name = "txtTelefono";
             this.txtTelefono.Size = new System.Drawing.Size(430, 23);
@@ -287,8 +288,8 @@
             // txtNumIdent
             // 
             this.txtNumIdent.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.txtNumIdent.BackColor = System.Drawing.Color.White;
-            this.txtNumIdent.ForeColor = System.Drawing.Color.Black;
+            this.txtNumIdent.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(30)))), ((int)(((byte)(30)))), ((int)(((byte)(30)))));
+            this.txtNumIdent.ForeColor = System.Drawing.Color.White;
             this.txtNumIdent.Location = new System.Drawing.Point(210, 213);
             this.txtNumIdent.Name = "txtNumIdent";
             this.txtNumIdent.Size = new System.Drawing.Size(335, 23);
@@ -297,8 +298,8 @@
             // txtNombre
             // 
             this.txtNombre.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.txtNombre.BackColor = System.Drawing.Color.White;
-            this.txtNombre.ForeColor = System.Drawing.Color.Black;
+            this.txtNombre.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(30)))), ((int)(((byte)(30)))), ((int)(((byte)(30)))));
+            this.txtNombre.ForeColor = System.Drawing.Color.White;
             this.txtNombre.Location = new System.Drawing.Point(112, 140);
             this.txtNombre.Name = "txtNombre";
             this.txtNombre.Size = new System.Drawing.Size(433, 23);

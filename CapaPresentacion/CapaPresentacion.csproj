@@ -61,6 +61,18 @@
     <Compile Include="FormLogin.Designer.cs">
       <DependentUpon>FormLogin.cs</DependentUpon>
     </Compile>
+    <Compile Include="FormMsgBox.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormMsgBox.designer.cs">
+      <DependentUpon>FormMsgBox.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FormMsgBoxQ.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormMsgBoxQ.designer.cs">
+      <DependentUpon>FormMsgBoxQ.cs</DependentUpon>
+    </Compile>
     <Compile Include="FormPrincipal.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -128,6 +140,12 @@
     </EmbeddedResource>
     <EmbeddedResource Include="FormLogin.resx">
       <DependentUpon>FormLogin.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormMsgBox.resx">
+      <DependentUpon>FormMsgBox.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormMsgBoxQ.resx">
+      <DependentUpon>FormMsgBoxQ.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="FormPrincipal.resx">
       <DependentUpon>FormPrincipal.cs</DependentUpon>

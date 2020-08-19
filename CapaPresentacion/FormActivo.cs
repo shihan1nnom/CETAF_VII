@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Presentacion;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -19,7 +20,14 @@ namespace CapaPresentacion
 
         private void btnCerrar_Click(object sender, EventArgs e)
         {
-            this.Close();
+            DialogResult resultado = new DialogResult();
+            Form mensaje = new FormMsgBox();
+            resultado = mensaje.ShowDialog();
+
+            if (resultado == DialogResult.OK)
+            {
+                this.Close();
+            }
         }
     }
 }

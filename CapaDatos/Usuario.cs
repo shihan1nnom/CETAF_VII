@@ -185,6 +185,22 @@ namespace CapaDatos
             }
         }
 
+        public void Eliminar()
+        {
+            using (var conexion = ObtenerConexion())
+            {
+                conexion.Open();
+                using (var comando = new SqlCommand())
+                {
+                    comando.Connection = conexion;
+                    comando.CommandText = "EliminarUser";
+                    comando.CommandType = CommandType.StoredProcedure;
+                    comando.Parameters.AddWithValue("@UsuarioID", UsuarioID);
+                    comando.ExecuteNonQuery();
+                }
+            }
+        }
+
         #endregion
     }
 }

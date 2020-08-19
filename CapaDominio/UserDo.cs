@@ -100,6 +100,12 @@ namespace CapaDominio
             _usuario.Modificar();
         }
 
+        public void EliminarUser(string pID)
+        {
+            _usuario._UsuarioID = Convert.ToInt32(pID);
+            _usuario.Eliminar();
+        }
+
         #endregion
 
     }
